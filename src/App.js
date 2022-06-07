@@ -19,7 +19,12 @@ function App() {
         <button onClick={() => dispatch(increment())}>+</button>
         <button onClick={() => dispatch(decrement())}>-</button>
 
-        {student.length > 0 && student.map(value => <h3>{value.name}</h3>)}
+        {student.student.length > 0 &&
+          student.student.map(value => (
+            <h3 key={value.id}>
+              {value.id} {value.name}
+            </h3>
+          ))}
       </div>
     </div>
   );
